@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,6 +246,9 @@
 </div>
 
 <script>
+// JS Date.getDay() -> 0=Sunday, 1=Monday, ... 6=Saturday
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
 const SCHEDULE = {
   Sunday: [
     {start:"08:30",end:"11:10", code:"CSE 0613-1104", title:"Structure Programming Language Lab", teacher:"Md. Mohidul Alam (Lab 1)", room:"306"},
@@ -271,9 +273,11 @@ const SCHEDULE = {
     {start:"09:50", end:"11:10", code:"CSE 0613-1103", title:"Structure Programming Language", teacher:"Md. Mohidul Alam", room:"305"},
     {start:"11:10", end:"12:30", code:"CSE 0533-1105", title:"Physics", teacher:"Md. Matiur Rahman", room:"216-Ad"},
     {start:"13:50", end:"15:10", code:"CSE 0533-1106", title:"Physics Lab", teacher:"Abdullah Saikat / Md. Matiur Rahman", room:"218-Ad"}
-  ]
+  ],
+  Friday: [],
+  Saturday: []
 };
- 
+
 
 function toMinutes(t){
   const [h,m] = t.split(':').map(Number);
